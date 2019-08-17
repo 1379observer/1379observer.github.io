@@ -66,7 +66,7 @@
 <meta property="og:description" content="参考书籍 《算法竞赛入门经典》千万不要图快–学的快，忘得快！1.1算术表达式输出 printf语句中 数据类型与占位符要对应 例如： 1printf(&quot;%lf&quot;，8/5);  编译不会出错，但运作则会出现   1printf(&quot;%d&quot;,8.0/5.0);//输出-1717986918  同样编译正常，但结果错误。 正确格式(整数值用%d输出,实数用%lf输出): 12printf(&quot;%lf&quot;，8.">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="http://1379observer.github.io/2019/08/15/node-md/1.jpg">
-<meta property="og:updated_time" content="2019-08-16T15:50:49.422Z">
+<meta property="og:updated_time" content="2019-08-17T09:48:52.837Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="总结">
 <meta name="twitter:description" content="参考书籍 《算法竞赛入门经典》千万不要图快–学的快，忘得快！1.1算术表达式输出 printf语句中 数据类型与占位符要对应 例如： 1printf(&quot;%lf&quot;，8/5);  编译不会出错，但运作则会出现   1printf(&quot;%d&quot;,8.0/5.0);//输出-1717986918  同样编译正常，但结果错误。 正确格式(整数值用%d输出,实数用%lf输出): 12printf(&quot;%lf&quot;，8.">
@@ -264,7 +264,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-08-16 23:50:49" itemprop="dateModified" datetime="2019-08-16T23:50:49+08:00">2019-08-16</time>
+                <time title="修改时间：2019-08-17 17:48:52" itemprop="dateModified" datetime="2019-08-17T17:48:52+08:00">2019-08-17</time>
               </span>
             
           
@@ -326,8 +326,18 @@
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#include&lt;stdio.h&gt;</span></span><br><span class="line"><span class="comment">#define INF 1000000000</span></span><br><span class="line">int <span class="function"><span class="title">main</span></span>()&#123;</span><br><span class="line">    FILE *fin,*fout;</span><br><span class="line">    fin=fopen(<span class="string">"data.in"</span>,<span class="string">"rb"</span>);</span><br><span class="line">    fout=fopen(<span class="string">"data.out"</span>,<span class="string">"wb"</span>);</span><br><span class="line">         int x,n = 0,min = INF,max = -INF,s = 0;</span><br><span class="line">         <span class="keyword">while</span>(fscanf(fin,<span class="string">"%d"</span>,&amp;x) == 1)&#123;</span><br><span class="line">             s += x;</span><br><span class="line">             <span class="keyword">if</span>(x &gt; max)max = x;</span><br><span class="line">             <span class="keyword">if</span>(x &lt; min)min = x;</span><br><span class="line">             // <span class="built_in">printf</span>(<span class="string">"x = %d,min = %d,max = %d"</span>,x,min,max);</span><br><span class="line">             n++;</span><br><span class="line">         &#125;</span><br><span class="line">         fprintf(fout,<span class="string">"%d %d %.3lf\n"</span>,min,max,(double)s/n);</span><br><span class="line">         fclose(n);</span><br><span class="line">         fclose(fout);</span><br><span class="line">         <span class="built_in">return</span> 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <p>重定向无法同时读写文件和标准输入输出</p>
-<p>fopen版改为标准输入输出，只需赋值fin=stdin,fout=stdout,即可，不要调用fopen和close。</p>
+<p>fopen版改为标准输入输出，只需赋值fin=stdin,fout=stdout,即可，不要调用fopen和fclose。<br>2.4 练习</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#include&lt;stdio.h&gt;</span></span><br><span class="line">int main()</span><br><span class="line">&#123;	</span><br><span class="line">	double i;</span><br><span class="line">	<span class="keyword">for</span>(i=0;i!=10;i+=0.1)</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">"%.1lf\n"</span>,i);</span><br><span class="line">	<span class="built_in">return</span> 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
+<p>i进行累加，但会出现误差，误差很小，但取小数点后一位是无法看出误差，但比较时i会等于10，循环将继续<br>浮点数计算有可能存在误差，尽量避免浮点数进行相等判断</p>
+<p>c++中的语法<br>No.1</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#include&lt;cstdio&gt;</span></span><br><span class="line">using namespace std;</span><br><span class="line">int <span class="function"><span class="title">main</span></span>()&#123;</span><br><span class="line">    int a,b;</span><br><span class="line">    <span class="keyword">while</span>(scanf(<span class="string">"%d %d"</span>,&amp;a,&amp;b)==2)<span class="built_in">printf</span>(<span class="string">"%d\n"</span>,a+b);</span><br><span class="line">    <span class="built_in">return</span> 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>No.2</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#include&lt;iostream&gt;</span></span><br><span class="line">using namespace std;</span><br><span class="line">int <span class="function"><span class="title">main</span></span>()&#123;</span><br><span class="line">    <span class="keyword">while</span>(cin &gt;&gt; a &gt;&gt; b) cout &lt;&lt; a+b &lt;&lt; <span class="string">"\n"</span>;</span><br><span class="line">    <span class="built_in">return</span> 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>需要读写文件</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#include&lt;iostream&gt;</span></span><br><span class="line">using namespace std;</span><br><span class="line">ifstream fin(<span class="string">"aplusb.in"</span>);</span><br><span class="line">ofstream fout(<span class="string">"aplusb.out"</span>);</span><br><span class="line">int <span class="function"><span class="title">main</span></span>()&#123;</span><br><span class="line">    <span class="keyword">while</span>(fin &gt;&gt; a &gt;&gt; b) fout &lt;&lt; a+b &lt;&lt; <span class="string">"\n"</span>;</span><br><span class="line">    <span class="built_in">return</span> 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
     </div>
 
     
@@ -360,6 +370,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+              <a href="/2019/08/17/practice/" rel="prev" title="practice">
+                practice <i class="fa fa-chevron-right"></i>
+              </a>
+            
           </div>
         </div>
     </footer>
@@ -411,7 +425,7 @@
         
           <a href="/archives/">
         
-          <span class="site-state-item-count">3</span>
+          <span class="site-state-item-count">4</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>

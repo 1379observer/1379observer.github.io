@@ -209,6 +209,99 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://1379observer.github.io/2019/08/17/practice/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="DDQZ">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="莫等闲">
+    </span>
+      <header class="post-header">
+
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/2019/08/17/practice/" class="post-title-link" itemprop="url">practice</a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2019-08-17 17:50:08 / 修改时间：23:20:14" itemprop="dateCreated datePublished" datetime="2019-08-17T17:50:08+08:00">2019-08-17</time>
+            </span>
+          
+            
+
+            
+          
+
+          <br>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          
+            <h2 id="1"><a href="#1" class="headerlink" title="1."></a>1.</h2><img src="/2019/08/17/practice/1.jpg" title="This is an image">
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#include &lt;stdio.h&gt;</span></span><br><span class="line">int main()</span><br><span class="line">&#123;</span><br><span class="line">    int a, b, c, ct = 1;</span><br><span class="line">	int <span class="built_in">integer</span>;</span><br><span class="line">	int i;</span><br><span class="line">    <span class="keyword">while</span>(3 == scanf(<span class="string">"%d%d%d"</span>, &amp;a, &amp;b, &amp;c))</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">if</span>(0 == a &amp;&amp; 0 == b &amp;&amp; 0 == c) <span class="built_in">break</span>;</span><br><span class="line">		<span class="built_in">integer</span> = a / b; // 获得整数部分</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">"Case %d: %d."</span>, ct++, <span class="built_in">integer</span>);</span><br><span class="line">        a %= b;         // 获得余数</span><br><span class="line">        i = 1;</span><br><span class="line">        // 进行c-1次模数学拟除法求出小数点后c-1位,因为要四舍五入,所以最后一位单独处理</span><br><span class="line">        <span class="keyword">while</span>(i++ &lt; c)</span><br><span class="line">        &#123;</span><br><span class="line">            a *= 10;</span><br><span class="line">            <span class="built_in">printf</span>(<span class="string">"%d"</span>, a / b);</span><br><span class="line">            a %= b;</span><br><span class="line">        &#125;</span><br><span class="line">        a *= 10;</span><br><span class="line">        // 判断最后一位的下一位是否大于5,进行四舍五入</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">"%d\n"</span>, ((a % b) * 10 / b &gt; 5) ? (a / b + 1) : (a / b));</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">return</span> 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>注意：输出答案数字可以分开打印，不一定作为整体打印，本题可将0.1667分为整数部分，小数点和小数部分打印。</p>
+<h2 id="2"><a href="#2" class="headerlink" title="2."></a>2.</h2><img src="/2019/08/17/practice/2.jpg" title="This is an image">
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#include&lt;stdio.h&gt;</span></span><br><span class="line">int main() </span><br><span class="line">&#123;	</span><br><span class="line">    //i = abc j = def k = gij</span><br><span class="line">	int s[10],i,m,k,j,sum;//定义一个数组记录0~9出现的次数 </span><br><span class="line">	<span class="keyword">for</span>(i=123;i&lt;333;i++)&#123;</span><br><span class="line">		<span class="keyword">for</span>(m=0;m&lt;10;m++)</span><br><span class="line">			s[m]=0;</span><br><span class="line">		s[i/100]=1;</span><br><span class="line">		s[i/10%10]=1;</span><br><span class="line">		s[i%10]=1;</span><br><span class="line">		j=i*2;</span><br><span class="line">		s[j/100]=1;</span><br><span class="line">		s[j/10%10]=1;</span><br><span class="line">		s[j%10]=1;</span><br><span class="line">		k=i*3;</span><br><span class="line">		s[k/100]=1;</span><br><span class="line">		s[k/10%10]=1;</span><br><span class="line">		s[k%10]=1;</span><br><span class="line">		sum=0;</span><br><span class="line">		<span class="keyword">for</span>(m=1;m&lt;10;m++)</span><br><span class="line">			sum+=s[m];</span><br><span class="line">		//将1~9每个数字出现次数加起来，如果等于9则每个数字都出现了一次 </span><br><span class="line">		<span class="keyword">if</span>(sum==9) <span class="built_in">printf</span>(<span class="string">"abc = %d def = %d gij = %d\n"</span>,i,i*2,i*3);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="built_in">return</span> 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>1.通过枚举方式，从最小的123，到最大的999/3=333，进行遍历，<em>2，</em>3满足条件<br>2.定义长度为10的数组(0<del>10),记录1</del>9数字的使用，用过标记为1<br>3.判断若数组内值和为9，证明每个数字只用过一次</p>
+
+          
+        
+      
+    </div>
+
+    
+    
+    
+<div>
+  
+</div>
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+    
+      
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://1379observer.github.io/2019/08/15/node-md/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -258,7 +351,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-08-16 23:50:49" itemprop="dateModified" datetime="2019-08-16T23:50:49+08:00">2019-08-16</time>
+                <time title="修改时间：2019-08-17 17:48:52" itemprop="dateModified" datetime="2019-08-17T17:48:52+08:00">2019-08-17</time>
               </span>
             
           
@@ -312,8 +405,18 @@
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#include&lt;stdio.h&gt;</span></span><br><span class="line"><span class="comment">#define INF 1000000000</span></span><br><span class="line">int <span class="function"><span class="title">main</span></span>()&#123;</span><br><span class="line">    FILE *fin,*fout;</span><br><span class="line">    fin=fopen(<span class="string">"data.in"</span>,<span class="string">"rb"</span>);</span><br><span class="line">    fout=fopen(<span class="string">"data.out"</span>,<span class="string">"wb"</span>);</span><br><span class="line">         int x,n = 0,min = INF,max = -INF,s = 0;</span><br><span class="line">         <span class="keyword">while</span>(fscanf(fin,<span class="string">"%d"</span>,&amp;x) == 1)&#123;</span><br><span class="line">             s += x;</span><br><span class="line">             <span class="keyword">if</span>(x &gt; max)max = x;</span><br><span class="line">             <span class="keyword">if</span>(x &lt; min)min = x;</span><br><span class="line">             // <span class="built_in">printf</span>(<span class="string">"x = %d,min = %d,max = %d"</span>,x,min,max);</span><br><span class="line">             n++;</span><br><span class="line">         &#125;</span><br><span class="line">         fprintf(fout,<span class="string">"%d %d %.3lf\n"</span>,min,max,(double)s/n);</span><br><span class="line">         fclose(n);</span><br><span class="line">         fclose(fout);</span><br><span class="line">         <span class="built_in">return</span> 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <p>重定向无法同时读写文件和标准输入输出</p>
-<p>fopen版改为标准输入输出，只需赋值fin=stdin,fout=stdout,即可，不要调用fopen和close。</p>
+<p>fopen版改为标准输入输出，只需赋值fin=stdin,fout=stdout,即可，不要调用fopen和fclose。<br>2.4 练习</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#include&lt;stdio.h&gt;</span></span><br><span class="line">int main()</span><br><span class="line">&#123;	</span><br><span class="line">	double i;</span><br><span class="line">	<span class="keyword">for</span>(i=0;i!=10;i+=0.1)</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">"%.1lf\n"</span>,i);</span><br><span class="line">	<span class="built_in">return</span> 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
+<p>i进行累加，但会出现误差，误差很小，但取小数点后一位是无法看出误差，但比较时i会等于10，循环将继续<br>浮点数计算有可能存在误差，尽量避免浮点数进行相等判断</p>
+<p>c++中的语法<br>No.1</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#include&lt;cstdio&gt;</span></span><br><span class="line">using namespace std;</span><br><span class="line">int <span class="function"><span class="title">main</span></span>()&#123;</span><br><span class="line">    int a,b;</span><br><span class="line">    <span class="keyword">while</span>(scanf(<span class="string">"%d %d"</span>,&amp;a,&amp;b)==2)<span class="built_in">printf</span>(<span class="string">"%d\n"</span>,a+b);</span><br><span class="line">    <span class="built_in">return</span> 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>No.2</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#include&lt;iostream&gt;</span></span><br><span class="line">using namespace std;</span><br><span class="line">int <span class="function"><span class="title">main</span></span>()&#123;</span><br><span class="line">    <span class="keyword">while</span>(cin &gt;&gt; a &gt;&gt; b) cout &lt;&lt; a+b &lt;&lt; <span class="string">"\n"</span>;</span><br><span class="line">    <span class="built_in">return</span> 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>需要读写文件</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#include&lt;iostream&gt;</span></span><br><span class="line">using namespace std;</span><br><span class="line">ifstream fin(<span class="string">"aplusb.in"</span>);</span><br><span class="line">ofstream fout(<span class="string">"aplusb.out"</span>);</span><br><span class="line">int <span class="function"><span class="title">main</span></span>()&#123;</span><br><span class="line">    <span class="keyword">while</span>(fin &gt;&gt; a &gt;&gt; b) fout &lt;&lt; a+b &lt;&lt; <span class="string">"\n"</span>;</span><br><span class="line">    <span class="built_in">return</span> 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
           
         
       
@@ -573,7 +676,7 @@
         
           <a href="/archives/">
         
-          <span class="site-state-item-count">3</span>
+          <span class="site-state-item-count">4</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
