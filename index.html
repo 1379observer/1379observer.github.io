@@ -209,7 +209,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://1379observer.github.io/2019/08/17/practice/">
+    <link itemprop="mainEntityOfPage" href="http://1379observer.github.io/2019/08/18/总结2/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="DDQZ">
@@ -226,7 +226,7 @@
           <h1 class="post-title" itemprop="name headline">
                 
                 
-                <a href="/2019/08/17/practice/" class="post-title-link" itemprop="url">practice</a>
+                <a href="/2019/08/18/总结2/" class="post-title-link" itemprop="url">总结2</a>
               
             
           </h1>
@@ -245,11 +245,125 @@
                 
               
 
-              <time title="创建时间：2019-08-17 17:50:08 / 修改时间：23:20:14" itemprop="dateCreated datePublished" datetime="2019-08-17T17:50:08+08:00">2019-08-17</time>
+              <time title="创建时间：2019-08-18 14:19:24" itemprop="dateCreated datePublished" datetime="2019-08-18T14:19:24+08:00">2019-08-18</time>
             </span>
           
             
 
+            
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2019-08-19 00:27:51" itemprop="dateModified" datetime="2019-08-19T00:27:51+08:00">2019-08-19</time>
+              </span>
+            
+          
+
+          <br>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          
+            <h2 id="3-1数组"><a href="#3-1数组" class="headerlink" title="3.1数组"></a>3.1数组</h2><p>1.在空间够用前提下，可将数组声明的比需求稍大些<br>2.比较大的数组应尽量声明在main函数外</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#include&lt;stdio.h&gt;</span></span><br><span class="line"><span class="comment">#define MAXN 100 +10</span></span><br><span class="line">int a[MAXN];</span><br><span class="line">int <span class="function"><span class="title">main</span></span>()&#123;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>string.h中：<br>从数组a中复制k个元素到数组b<br>memcpy(b,a,sizeof(int)<em>k);<br>memcpy(b,a,sizeof(double)</em>k);<br>数组初始化<br>memset(a,0,sizeof(a));</p>
+<h2 id="3-2字符数组"><a href="#3-2字符数组" class="headerlink" title="3.2字符数组"></a>3.2字符数组</h2><p>在scanf(“%s”,s);不需要在s前面加&amp;符号。如果是字符串数组char s[MAXN][MAXL],可以用scanf(“%s”,s[i])读取第i个字符串</p>
+
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#include&lt;stdio.h&gt;</span></span><br><span class="line"><span class="comment">#include&lt;string.h&gt;</span></span><br><span class="line">int <span class="function"><span class="title">main</span></span>()&#123;</span><br><span class="line">	int i,ok,abc,de,x,y,z,count=0;</span><br><span class="line">	char s[20],buf[99];</span><br><span class="line">	scanf(<span class="string">"%s"</span>,s);</span><br><span class="line">	<span class="keyword">for</span>(abc=111;abc&lt;=999;abc++)</span><br><span class="line">		<span class="keyword">for</span>(de=11;de&lt;=99;de++)&#123;</span><br><span class="line">			x=abc*(de%10);y=abc*(de/10);z=abc*de;</span><br><span class="line">			sprintf(buf,<span class="string">"%d%d%d%d%d"</span>,abc,de,x,y,z);</span><br><span class="line">			ok=1;</span><br><span class="line">			<span class="keyword">for</span>(i=0;i&lt;strlen(buf);i++)</span><br><span class="line">				<span class="keyword">if</span>(strchr(s,buf[i])==NULL)ok=0;</span><br><span class="line">				<span class="keyword">if</span>(ok)&#123;</span><br><span class="line">					<span class="built_in">printf</span>(<span class="string">"&lt;%d&gt;\n"</span>,++count);</span><br><span class="line">					<span class="built_in">printf</span>(<span class="string">"%5d\nX%4d\n-----\n%5d\n%d\n-----\n%5d\n\n"</span>,abc,de,x,y,z);</span><br><span class="line">				&#125;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">"The number of solutions=%d\n"</span>,count);</span><br><span class="line">		<span class="built_in">return</span> 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>sprintf函数：输出到字符串，需保证字符串够大（字符个数加1）<br>字符串中的各个字符是s[0],s[1]…..s[strlen(s)-1]<br>strlen()函数返回字符串个数包括”\0”</p>
+
+          
+        
+      
+    </div>
+
+    
+    
+    
+<div>
+  
+</div>
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+    
+      
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://1379observer.github.io/2019/08/17/practice/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="DDQZ">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="莫等闲">
+    </span>
+      <header class="post-header">
+
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/2019/08/17/practice/" class="post-title-link" itemprop="url">练习1</a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2019-08-17 17:50:08" itemprop="dateCreated datePublished" datetime="2019-08-17T17:50:08+08:00">2019-08-17</time>
+            </span>
+          
+            
+
+            
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2019-08-19 00:27:50" itemprop="dateModified" datetime="2019-08-19T00:27:50+08:00">2019-08-19</time>
+              </span>
             
           
 
@@ -266,14 +380,23 @@
       
           
             <h2 id="1"><a href="#1" class="headerlink" title="1."></a>1.</h2><img src="/2019/08/17/practice/1.jpg" title="This is an image">
+
+<p>思路：<br>输出答案数字可以分开打印，不一定作为整体打印，本题可将0.1667分为整数部分，小数点和小数部分打印。</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#include &lt;stdio.h&gt;</span></span><br><span class="line">int main()</span><br><span class="line">&#123;</span><br><span class="line">    int a, b, c, ct = 1;</span><br><span class="line">	int <span class="built_in">integer</span>;</span><br><span class="line">	int i;</span><br><span class="line">    <span class="keyword">while</span>(3 == scanf(<span class="string">"%d%d%d"</span>, &amp;a, &amp;b, &amp;c))</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">if</span>(0 == a &amp;&amp; 0 == b &amp;&amp; 0 == c) <span class="built_in">break</span>;</span><br><span class="line">		<span class="built_in">integer</span> = a / b; // 获得整数部分</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">"Case %d: %d."</span>, ct++, <span class="built_in">integer</span>);</span><br><span class="line">        a %= b;         // 获得余数</span><br><span class="line">        i = 1;</span><br><span class="line">        // 进行c-1次模数学拟除法求出小数点后c-1位,因为要四舍五入,所以最后一位单独处理</span><br><span class="line">        <span class="keyword">while</span>(i++ &lt; c)</span><br><span class="line">        &#123;</span><br><span class="line">            a *= 10;</span><br><span class="line">            <span class="built_in">printf</span>(<span class="string">"%d"</span>, a / b);</span><br><span class="line">            a %= b;</span><br><span class="line">        &#125;</span><br><span class="line">        a *= 10;</span><br><span class="line">        // 判断最后一位的下一位是否大于5,进行四舍五入</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">"%d\n"</span>, ((a % b) * 10 / b &gt; 5) ? (a / b + 1) : (a / b));</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">return</span> 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<p>注意：输出答案数字可以分开打印，不一定作为整体打印，本题可将0.1667分为整数部分，小数点和小数部分打印。</p>
 <h2 id="2"><a href="#2" class="headerlink" title="2."></a>2.</h2><img src="/2019/08/17/practice/2.jpg" title="This is an image">
+
+<p>思路：<br>1.通过枚举方式，从最小的123，到最大的999/3=333，进行遍历，<em>2，</em>3满足条件<br>2.定义长度为10的数组(0<del>10),记录1</del>9数字的使用，用过标记为1<br>3.判断若数组内值和为9，证明每个数字只用过一次</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#include&lt;stdio.h&gt;</span></span><br><span class="line">int main() </span><br><span class="line">&#123;	</span><br><span class="line">    //i = abc j = def k = gij</span><br><span class="line">	int s[10],i,m,k,j,sum;//定义一个数组记录0~9出现的次数 </span><br><span class="line">	<span class="keyword">for</span>(i=123;i&lt;333;i++)&#123;</span><br><span class="line">		<span class="keyword">for</span>(m=0;m&lt;10;m++)</span><br><span class="line">			s[m]=0;</span><br><span class="line">		s[i/100]=1;</span><br><span class="line">		s[i/10%10]=1;</span><br><span class="line">		s[i%10]=1;</span><br><span class="line">		j=i*2;</span><br><span class="line">		s[j/100]=1;</span><br><span class="line">		s[j/10%10]=1;</span><br><span class="line">		s[j%10]=1;</span><br><span class="line">		k=i*3;</span><br><span class="line">		s[k/100]=1;</span><br><span class="line">		s[k/10%10]=1;</span><br><span class="line">		s[k%10]=1;</span><br><span class="line">		sum=0;</span><br><span class="line">		<span class="keyword">for</span>(m=1;m&lt;10;m++)</span><br><span class="line">			sum+=s[m];</span><br><span class="line">		//将1~9每个数字出现次数加起来，如果等于9则每个数字都出现了一次 </span><br><span class="line">		<span class="keyword">if</span>(sum==9) <span class="built_in">printf</span>(<span class="string">"abc = %d def = %d gij = %d\n"</span>,i,i*2,i*3);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="built_in">return</span> 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<p>1.通过枚举方式，从最小的123，到最大的999/3=333，进行遍历，<em>2，</em>3满足条件<br>2.定义长度为10的数组(0<del>10),记录1</del>9数字的使用，用过标记为1<br>3.判断若数组内值和为9，证明每个数字只用过一次</p>
+<h2 id="3"><a href="#3" class="headerlink" title="3."></a>3.</h2>
+<p>思路:<br>1.设置计数器，最大值为n<em>n,<br>2.像一根笔画，最先开始从第一行最后一个元素初值从1开始，列不变行向下到底端，  行不变列向左到边界，列不变行向上到边界，  行不变列增加到已被赋值的数， 列不变行向下到已被赋值的数。。。。一直循环按此规律循环。。直到元素值比n</em>n大</p>
+<ol start="3">
+<li>4个内循环分别的功能是向下，向左，向上，向右，在具体循环的时候，每次都是先判断在执行，先试探下一个元素是否没有越边界或是否无值，才能继续向下，否则进入下一个while循环，变换方向<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="comment">#include &lt;stdio.h&gt;</span></span><br><span class="line">int main()</span><br><span class="line">&#123;</span><br><span class="line">	int n,a[101][101]=&#123;0&#125;,x,y,c=0;</span><br><span class="line">	scanf(<span class="string">"%d"</span>,&amp;n);</span><br><span class="line">	x=0;y=n-1;</span><br><span class="line">	c=a[x][y]=1;//起始点</span><br><span class="line">	<span class="keyword">while</span> (c&lt;n*n)//最大数为n*n</span><br><span class="line">	&#123;	</span><br><span class="line">		//细节 将!a[x+1][y]放在右边，x+1&lt;n不成立，!a[x+1][y]不执行，可以避免数组越界</span><br><span class="line">		<span class="keyword">while</span> (x+1&lt;n&amp;&amp;!a[x+1][y])//向下</span><br><span class="line">			a[++x][y]=++c;</span><br><span class="line">		<span class="keyword">while</span> (y-1&gt;=0&amp;&amp;!a[x][y-1])//向左</span><br><span class="line">			a[x][--y]=++c;</span><br><span class="line">		<span class="keyword">while</span> (x-1&gt;=0&amp;&amp;!a[x-1][y])//向上</span><br><span class="line">			a[--x][y]=++c;</span><br><span class="line">		<span class="keyword">while</span> (y+1&lt;n&amp;&amp;!a[x][y+1])//向右</span><br><span class="line">			a[x][++y]=++c;</span><br><span class="line">	&#125;	</span><br><span class="line">		<span class="keyword">for</span> (x=0;x&lt;n;x++)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">for</span> (y=0;y&lt;n;y++)</span><br><span class="line">			<span class="built_in">printf</span>(<span class="string">"%3d "</span>,a[x][y]);</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">"\n"</span>);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="built_in">return</span> 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
+</li>
+</ol>
+<h2 id="3-1"><a href="#3-1" class="headerlink" title="3."></a>3.</h2>
           
         
       
@@ -319,7 +442,7 @@
           <h1 class="post-title" itemprop="name headline">
                 
                 
-                <a href="/2019/08/15/node-md/" class="post-title-link" itemprop="url">总结</a>
+                <a href="/2019/08/15/node-md/" class="post-title-link" itemprop="url">总结1</a>
               
             
           </h1>
@@ -351,7 +474,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-08-17 17:48:52" itemprop="dateModified" datetime="2019-08-17T17:48:52+08:00">2019-08-17</time>
+                <time title="修改时间：2019-08-18 21:29:17" itemprop="dateModified" datetime="2019-08-18T21:29:17+08:00">2019-08-18</time>
               </span>
             
           
@@ -676,7 +799,7 @@
         
           <a href="/archives/">
         
-          <span class="site-state-item-count">4</span>
+          <span class="site-state-item-count">5</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
