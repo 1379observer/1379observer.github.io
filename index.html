@@ -209,6 +209,106 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://1379observer.github.io/2019/08/20/J2EE/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="DDQZ">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="莫等闲">
+    </span>
+      <header class="post-header">
+
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/2019/08/20/J2EE/" class="post-title-link" itemprop="url">J2EE1</a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2019-08-20 10:31:25 / 修改时间：18:21:15" itemprop="dateCreated datePublished" datetime="2019-08-20T10:31:25+08:00">2019-08-20</time>
+            </span>
+          
+            
+
+            
+          
+
+          <br>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          
+            <h2 id="提高软件系统的可复用性和可扩张性，使层次间松耦合，内部高内聚"><a href="#提高软件系统的可复用性和可扩张性，使层次间松耦合，内部高内聚" class="headerlink" title="提高软件系统的可复用性和可扩张性，使层次间松耦合，内部高内聚"></a>提高软件系统的可复用性和可扩张性，使层次间松耦合，内部高内聚</h2><h2 id="J2EE的了解"><a href="#J2EE的了解" class="headerlink" title="J2EE的了解"></a>J2EE的了解</h2><p>   为解决两层模式(C/S)的弊端-第一次部署容易，但难于升级或改进，可扩展性不理想等等。J2EE将两层化模型分为多层。<br>    C/S-&gt;B/S<br>–1.分布式（RMI技术），一个系统由多台电脑完成进行<br>  2.标准或规范，由web服务供应商去实现</p>
+<p>J2EE与.net<br>功能类似，但.net（微软）是一种产品，J2EE是一种规范</p>
+<p>组件层次–！1.Servlet                  表示逻辑<br>         ！2.JSP                      表示逻辑<br>         ！3.JDBC(Java数据库连接)      数据库访问<br>         4.JTA(Java事务API)         事务管理（跨行消费）<br>         5.JNDI(Java名字和目录接口)  对象名字的中央注册（新生注册，给予学号）<br>         6.RMI(远程方法调用)         RMI对象的分布式执行<br>         7.EJB(企业JavaBean)         实现事务逻辑（现以不流行，但学其思想）<br>         8.JMS(Java消息服务)         协调分布执（不需要等待结果，就可执行）<br>         ！9.XML                      实现数据互访问（由W3C指定的标准）<br>         10.JavaMail<br>        1,2-&gt;JavaWeb        </p>
+<h2 id="J2EE应用程序结构"><a href="#J2EE应用程序结构" class="headerlink" title="J2EE应用程序结构"></a>J2EE应用程序结构</h2><pre><code>三次体系结构</code></pre>  <img src="/2019/08/20/J2EE/1.jpg" title="This is an image">
+
+<p>Web浏览器客户端-B/S结构<br>Java应用客户端-C/S结构<br>客户层调用中间层的java对象，中间层中企业Bean（EJB）-一个java对象，需放在容器中运行，而服务器（程序）提供服务对应服务使运行</p>
+<h2 id="J2EE应用服务器"><a href="#J2EE应用服务器" class="headerlink" title="J2EE应用服务器"></a>J2EE应用服务器</h2><p>按照J2EE的规范提供J2EE应用程序所需的服务：<br>1.Web服务<br>2.业务组件服务<br>产品<br>1.Apache的Tomcat提供Web服务<br>2.BEA公司的WebLogic Server作为J2EEE应用服务器实现了J2EE的全部特性<br>3.IBM WebSphere作为J2EE应用服务器，实现了J2EE的全部特性</p>
+<p>处理一些常见的编程任务：<br>1.提供事务服务      4.数据库访问和连接池<br>2.安全认证服务      5.线程池<br>3.命名和目录服务    6.负载均衡<br>                   7.容错</p>
+<h1 id="客户层组件"><a href="#客户层组件" class="headerlink" title="客户层组件"></a>客户层组件</h1><p>对应于J2EE应用程序的客户端<br>基于：Web方式的（例如Web页面、Applet）<br>     传统方式的（例如Java应用程序）<br>     移动设备</p>
+<h2 id="Web层组件"><a href="#Web层组件" class="headerlink" title="Web层组件"></a>Web层组件</h2><p>·1.JSP页面<br> 2.Servlet<br>·静态的HTML页面和Applet不算是Web层组件<br>·Web层可能包含某些JavaBean对象处理用户输入，并把输入发送给运行在业务层上的组件处理</p>
+<h2 id="业务逻辑层组件"><a href="#业务逻辑层组件" class="headerlink" title="业务逻辑层组件"></a>业务逻辑层组件</h2><p>·主要：EJB（Enterprise Bean）、JavaBean<br>·满足业务领域需要，由在层上的EJB或JavaBean进行处理</p>
+<p>EJB2.0有三种EJB：会话Bean（Session Bean）、实体Bean（Entity Bean）、消息驱动Bean</p>
+<h2 id="企业信息系统层"><a href="#企业信息系统层" class="headerlink" title="企业信息系统层"></a>企业信息系统层</h2><p>其包括企业基础建设系统：企业资源计划（ERP）、数据库系统、其他遗留信息系统</p>
+ <img src="/2019/08/20/J2EE/2.jpg" title="This is an image">
+<p>表示层<br>·用户通过这一层向系统提交请求或发出指令<br>·轻薄的不应该具有业务逻辑<br>·可以传统的Java Application<br>·JSP和Sevlet的Web层<br>服务层<br>·系统的核心业务处理层<br>数据持有层<br>·服务层用于访问数据库层<br>·通过DAO访问数据库</p>
+
+          
+        
+      
+    </div>
+
+    
+    
+    
+<div>
+  
+</div>
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+    
+      
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://1379observer.github.io/2019/08/18/总结2/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -258,7 +358,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-08-19 00:27:51" itemprop="dateModified" datetime="2019-08-19T00:27:51+08:00">2019-08-19</time>
+                <time title="修改时间：2019-08-19 19:43:22" itemprop="dateModified" datetime="2019-08-19T19:43:22+08:00">2019-08-19</time>
               </span>
             
           
@@ -284,7 +384,13 @@
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#include&lt;stdio.h&gt;</span></span><br><span class="line"><span class="comment">#include&lt;string.h&gt;</span></span><br><span class="line">int <span class="function"><span class="title">main</span></span>()&#123;</span><br><span class="line">	int i,ok,abc,de,x,y,z,count=0;</span><br><span class="line">	char s[20],buf[99];</span><br><span class="line">	scanf(<span class="string">"%s"</span>,s);</span><br><span class="line">	<span class="keyword">for</span>(abc=111;abc&lt;=999;abc++)</span><br><span class="line">		<span class="keyword">for</span>(de=11;de&lt;=99;de++)&#123;</span><br><span class="line">			x=abc*(de%10);y=abc*(de/10);z=abc*de;</span><br><span class="line">			sprintf(buf,<span class="string">"%d%d%d%d%d"</span>,abc,de,x,y,z);</span><br><span class="line">			ok=1;</span><br><span class="line">			<span class="keyword">for</span>(i=0;i&lt;strlen(buf);i++)</span><br><span class="line">				<span class="keyword">if</span>(strchr(s,buf[i])==NULL)ok=0;</span><br><span class="line">				<span class="keyword">if</span>(ok)&#123;</span><br><span class="line">					<span class="built_in">printf</span>(<span class="string">"&lt;%d&gt;\n"</span>,++count);</span><br><span class="line">					<span class="built_in">printf</span>(<span class="string">"%5d\nX%4d\n-----\n%5d\n%d\n-----\n%5d\n\n"</span>,abc,de,x,y,z);</span><br><span class="line">				&#125;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">"The number of solutions=%d\n"</span>,count);</span><br><span class="line">		<span class="built_in">return</span> 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <p>sprintf函数：输出到字符串，需保证字符串够大（字符个数加1）<br>字符串中的各个字符是s[0],s[1]…..s[strlen(s)-1]<br>strlen()函数返回字符串个数包括”\0”</p>
+<p>注意count++的使用</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">int count=0;</span><br><span class="line">//<span class="built_in">printf</span>(<span class="string">"%d"</span>,count++);值为0</span><br><span class="line">count=count++;</span><br><span class="line"><span class="built_in">printf</span>(<span class="string">"%d"</span>,count);//输出1</span><br></pre></td></tr></table></figure>
 
+<p>说明count++是将count加一后的值赋给count，是将计算结果赋给count，而不是将表达式的值赋给count</p>
+<h2 id="3-3最长回文子串"><a href="#3-3最长回文子串" class="headerlink" title="3.3最长回文子串"></a>3.3最长回文子串</h2><p>输入字符串：<br>1.scanf(“%s”,s);  碰到空格或TAB就会停下来<br>2.fgetc(fin),它读取一个打开文件fin，读取第一个字符，返回一个int值，文件结束fgetc将返回一个特殊标记EOF<br>3.getchar()标准输入读取一个字符，等价于fgetc(stdin)，函数getchar()读取stdin流中的下一个字符，它具备缓冲和回显功能；因此此处由于getchar()是一个缓冲输入函数，在用户按下enter之前，该函数不会收到任何字符，但是用户输入的每个字符都会被回显到屏幕上，用户按下enter键之后，之前输入的所有字符（包括换行符）都被操作系统发给stdin,gechar函数每次返回一个字符，而该字符又被赋值给ch<br>4.fgets(buf,MAXN,fin)读取完整一行，其中buf声明为char buf[MAXN]，当一个字符都没读到时，返回NULL，标准输入将fin替换为stdin<br>5.get(s)存在缓冲区溢出漏洞，不推荐使用</p>
+<p>ctype.h中的isalpha(c),它用于判断字符c是否为大写字母或小写字母，toupper(c)返回c的大写形式</p>
+<h2 id="编码阶段可以采用迭代式开发————每次只实现一点小功能，充分测试，确保功能正常"><a href="#编码阶段可以采用迭代式开发————每次只实现一点小功能，充分测试，确保功能正常" class="headerlink" title="编码阶段可以采用迭代式开发————每次只实现一点小功能，充分测试，确保功能正常"></a>编码阶段可以采用迭代式开发————每次只实现一点小功能，充分测试，确保功能正常</h2>
           
         
       
@@ -799,7 +905,7 @@
         
           <a href="/archives/">
         
-          <span class="site-state-item-count">5</span>
+          <span class="site-state-item-count">6</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -818,7 +924,9 @@
         
           
         
-        <span class="site-state-item-count">2</span>
+          
+        
+        <span class="site-state-item-count">3</span>
         <span class="site-state-item-name">标签</span>
         </a>
       </div>
