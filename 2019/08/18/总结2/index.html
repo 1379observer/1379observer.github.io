@@ -65,7 +65,7 @@
 <meta property="og:site_name" content="莫等闲">
 <meta property="og:description" content="3.1数组1.在空间够用前提下，可将数组声明的比需求稍大些2.比较大的数组应尽量声明在main函数外 123456#include&amp;lt;stdio.h&amp;gt;#define MAXN 100 +10int a[MAXN];int main()&amp;#123;&amp;#125;  string.h中：从数组a中复制k个元素到数组bmemcpy(b,a,sizeof(int)k);memcpy(b,a,siz">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-08-19T11:43:22.222Z">
+<meta property="og:updated_time" content="2019-08-21T16:48:45.779Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="总结2">
 <meta name="twitter:description" content="3.1数组1.在空间够用前提下，可将数组声明的比需求稍大些2.比较大的数组应尽量声明在main函数外 123456#include&amp;lt;stdio.h&amp;gt;#define MAXN 100 +10int a[MAXN];int main()&amp;#123;&amp;#125;  string.h中：从数组a中复制k个元素到数组bmemcpy(b,a,sizeof(int)k);memcpy(b,a,siz">
@@ -262,7 +262,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-08-19 19:43:22" itemprop="dateModified" datetime="2019-08-19T19:43:22+08:00">2019-08-19</time>
+                <time title="修改时间：2019-08-22 00:48:45" itemprop="dateModified" datetime="2019-08-22T00:48:45+08:00">2019-08-22</time>
               </span>
             
           
@@ -300,9 +300,9 @@
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">int count=0;</span><br><span class="line">//<span class="built_in">printf</span>(<span class="string">"%d"</span>,count++);值为0</span><br><span class="line">count=count++;</span><br><span class="line"><span class="built_in">printf</span>(<span class="string">"%d"</span>,count);//输出1</span><br></pre></td></tr></table></figure>
 
 <p>说明count++是将count加一后的值赋给count，是将计算结果赋给count，而不是将表达式的值赋给count</p>
-<h2 id="3-3最长回文子串"><a href="#3-3最长回文子串" class="headerlink" title="3.3最长回文子串"></a>3.3最长回文子串</h2><p>输入字符串：<br>1.scanf(“%s”,s);  碰到空格或TAB就会停下来<br>2.fgetc(fin),它读取一个打开文件fin，读取第一个字符，返回一个int值，文件结束fgetc将返回一个特殊标记EOF<br>3.getchar()标准输入读取一个字符，等价于fgetc(stdin)，函数getchar()读取stdin流中的下一个字符，它具备缓冲和回显功能；因此此处由于getchar()是一个缓冲输入函数，在用户按下enter之前，该函数不会收到任何字符，但是用户输入的每个字符都会被回显到屏幕上，用户按下enter键之后，之前输入的所有字符（包括换行符）都被操作系统发给stdin,gechar函数每次返回一个字符，而该字符又被赋值给ch<br>4.fgets(buf,MAXN,fin)读取完整一行，其中buf声明为char buf[MAXN]，当一个字符都没读到时，返回NULL，标准输入将fin替换为stdin<br>5.get(s)存在缓冲区溢出漏洞，不推荐使用</p>
+<h2 id="3-3最长回文子串"><a href="#3-3最长回文子串" class="headerlink" title="3.3最长回文子串"></a>3.3最长回文子串</h2><p>输入字符串：<br>1.scanf(“%s”,s);  碰到空格或TAB就会停下来<br>2.fgetc(fin),它读取一个打开文件fin，读取第一个字符，返回一个int值，文件结束fgetc将返回一个特殊标记EOF<br>3.getchar()标准输入读取一个字符，等价于fgetc(stdin)，函数getchar()读取stdin流中的下一个字符，它具备缓冲和回显功能；因此此处由于getchar()是一个缓冲输入函数，在用户按下enter之前，该函数不会收到任何字符，但是用户输入的每个字符都会被回显到屏幕上，用户按下enter键之后，之前输入的所有字符（包括换行符）都被操作系统发给stdin,gechar函数每次返回一个字符，而该字符又被赋值给ch。但不会给自动给字符串末尾添加\0，所以要手动增加。若没有增加strlen的使用将出错。<br>4.fgets(buf,MAXN,fin)读取完整一行，其中buf声明为char buf[MAXN]，当一个字符都没读到时，返回NULL，标准输入将fin替换为stdin<br>5.get(s)存在缓冲区溢出漏洞，不推荐使用</p>
 <p>ctype.h中的isalpha(c),它用于判断字符c是否为大写字母或小写字母，toupper(c)返回c的大写形式</p>
-<h2 id="编码阶段可以采用迭代式开发————每次只实现一点小功能，充分测试，确保功能正常"><a href="#编码阶段可以采用迭代式开发————每次只实现一点小功能，充分测试，确保功能正常" class="headerlink" title="编码阶段可以采用迭代式开发————每次只实现一点小功能，充分测试，确保功能正常"></a>编码阶段可以采用迭代式开发————每次只实现一点小功能，充分测试，确保功能正常</h2>
+<h2 id="编码阶段可以采用迭代式开发————每次只实现一点小功能，充分测试，确保功能正常"><a href="#编码阶段可以采用迭代式开发————每次只实现一点小功能，充分测试，确保功能正常" class="headerlink" title="编码阶段可以采用迭代式开发————每次只实现一点小功能，充分测试，确保功能正常"></a>编码阶段可以采用迭代式开发————每次只实现一点小功能，充分测试，确保功能正常</h2><h2 id="4-1数学函数"><a href="#4-1数学函数" class="headerlink" title="4.1数学函数"></a>4.1数学函数</h2>
     </div>
 
     
@@ -432,7 +432,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#3-1数组"><span class="nav-number">1.</span> <span class="nav-text">3.1数组</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-2字符数组"><span class="nav-number">2.</span> <span class="nav-text">3.2字符数组</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-3最长回文子串"><span class="nav-number">3.</span> <span class="nav-text">3.3最长回文子串</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#编码阶段可以采用迭代式开发————每次只实现一点小功能，充分测试，确保功能正常"><span class="nav-number">4.</span> <span class="nav-text">编码阶段可以采用迭代式开发————每次只实现一点小功能，充分测试，确保功能正常</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#3-1数组"><span class="nav-number">1.</span> <span class="nav-text">3.1数组</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-2字符数组"><span class="nav-number">2.</span> <span class="nav-text">3.2字符数组</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-3最长回文子串"><span class="nav-number">3.</span> <span class="nav-text">3.3最长回文子串</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#编码阶段可以采用迭代式开发————每次只实现一点小功能，充分测试，确保功能正常"><span class="nav-number">4.</span> <span class="nav-text">编码阶段可以采用迭代式开发————每次只实现一点小功能，充分测试，确保功能正常</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-1数学函数"><span class="nav-number">5.</span> <span class="nav-text">4.1数学函数</span></a></li></ol></div>
             
 
           </div>
