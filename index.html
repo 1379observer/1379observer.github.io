@@ -258,7 +258,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-09-05 22:15:51" itemprop="dateModified" datetime="2019-09-05T22:15:51+08:00">2019-09-05</time>
+                <time title="修改时间：2019-09-07 17:11:07" itemprop="dateModified" datetime="2019-09-07T17:11:07+08:00">2019-09-07</time>
               </span>
             
           
@@ -291,7 +291,7 @@
     CSS（层叠样式彪）
 </pre><pre>
 <p>HTML5新特性<br>    引入原生多媒体支持<br>    引入可编程内容<br></p></pre><p></p>
-<h2 id="HTML"><a href="#HTML" class="headerlink" title="HTML"></a>HTML</h2><p>使用HTML标签时，关心的是标签的语义</p>
+<h3 id="HTML"><a href="#HTML" class="headerlink" title="HTML"></a>HTML</h3><p>使用HTML标签时，关心的是标签的语义</p>
 <h2 id="标签"><a href="#标签" class="headerlink" title="标签"></a>标签</h2><p>根标签</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;html&gt; &lt;/html&gt;</span><br></pre></td></tr></table></figure>
 
@@ -362,7 +362,7 @@
 <h2 id="超链接"><a href="#超链接" class="headerlink" title="超链接"></a>超链接</h2><pre><code>使用超链接可以让我们从一个页面跳转到另一个页面</code></pre><p>属性：<pre>href：指向链接跳转目标地址（相对路径或可以写一个完整的地址）<br>            设置为#时，超链接会跳转到当前页面顶部<br>            mailto：邮件地址 默认打开计算机默认电子邮件客户端，并且件收件人设置mailto后的邮箱地址<br>     id：标签的唯一标识<br>     target：指定打开链接位置<br>             可以设置直一个内联框架的name属性值，链接将在指定的内联框架打开<br>         </pre>    </p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;a href=<span class="string">"目标地址"</span> target=<span class="string">"内联框架xxx"</span>&gt;超链接&lt;/a&gt;</span><br></pre></td></tr></table></figure>
 
-<h2 id="CSS"><a href="#CSS" class="headerlink" title="CSS"></a>CSS</h2><pre><code>层叠样式表
+<h3 id="CSS"><a href="#CSS" class="headerlink" title="CSS"></a>CSS</h3><pre><code>层叠样式表
 注意style里面不能出现html的内容</code></pre><h2 id="style属性"><a href="#style属性" class="headerlink" title="style属性"></a>style属性</h2><pre><code>内联样式 只对当前元素中的内容起作用</code></pre><p>颜色，大小</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;p style=<span class="string">"color:red;font-size:40px;"</span>&gt;&lt;/p&gt;</span><br></pre></td></tr></table></figure>
 
@@ -414,7 +414,83 @@ a:hover{}
 正在点击的链接
 a:active{}(涉及用户隐私，visited所以只能设置字体颜色)
 获取焦点
-:focus{}(文本框获取焦点后，可以修改内容)</code></pre>
+:focus{}(文本框获取焦点后，可以修改内容)</code></pre><h2 id="伪元素"><a href="#伪元素" class="headerlink" title="伪元素"></a>伪元素</h2><pre><code>来表示元素中一些特殊的位置</code></pre><p>为P中设置第一行设置一个背景颜色</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">p:first-line&#123;</span><br><span class="line">    background-color:...;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>为p中第一个字符设置特殊样式</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">p:first-letter&#123;</span><br><span class="line">    color:xx;</span><br><span class="line">    font-size:xx;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>:before表示元素最前边</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">p:before&#123;;</span><br><span class="line">    content:<span class="string">"xxxxxx"</span>;</span><br><span class="line">    color:xx;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>:after表示元素最后边</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">p:after&#123;;</span><br><span class="line">    content:<span class="string">"xxxxxx"</span>;</span><br><span class="line">    color:xx;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="属性选择器"><a href="#属性选择器" class="headerlink" title="属性选择器"></a>属性选择器</h2><pre><code>作用：可以根据元素中属性或属性值来选取指定元素
+语法：
+    [属性名]选取含有指定属性的元素
+    [属性名=&quot;属性值&quot;]
+    [属性名^=&quot;属性值&quot;]选取含有指定属性值内容开头的元素
+    [属性名&amp;=&quot;属性值&quot;]选取含有指定属性值内容结尾的元素
+    [属性名*=&quot;属性值&quot;]选取含有指定属性值内容包含的元素</code></pre><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">p[title]&#123;</span><br><span class="line">    xxx:xxx;</span><br><span class="line">&#125;</span><br><span class="line">p[title=<span class="string">"hello"</span>]&#123;</span><br><span class="line">    xxx:xxx;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>title属性：可以给任何标签指定，当鼠标移到元素上，元素中title属性值将会作为提示文字显示</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;p title=<span class="string">"hello"</span>&gt;sssss&lt;/p&gt;</span><br></pre></td></tr></table></figure>
+
+<h2 id="其他子元素选择器"><a href="#其他子元素选择器" class="headerlink" title="其他子元素选择器"></a>其他子元素选择器</h2><pre><code>:first-child 可以选中第一个子元素
+:last-child 可以选中最后一个子元素
+:nth-child(number) 可以选中第number个字元素
+        even表示偶数位置的子元素
+        odd表示奇数位置的子元素
+当前类型所有子元素中排列
+:first-of-type
+:last-of-type
+:nth-of-type</code></pre><h2 id="兄弟选择器"><a href="#兄弟选择器" class="headerlink" title="兄弟选择器"></a>兄弟选择器</h2><pre><code>作用：选中一个元素后挨紧着的指定兄弟元素
+语法：前一个 + 后一个
+作用：选中一个元素后面所有的兄弟元素
+语法：前一个 ~ 后边所有</code></pre><h2 id="否定伪类"><a href="#否定伪类" class="headerlink" title="否定伪类"></a>否定伪类</h2><pre><code>作用：可以从已选中的元素中剔除某些元素
+语法：:not(选择器){}</code></pre><h2 id="样式继承"><a href="#样式继承" class="headerlink" title="样式继承"></a>样式继承</h2><pre><code>子继承父或祖的样式
+但是不是所有的样式都会被继承，比如：背景相关的样式都不会被继承</code></pre><h2 id="选择器优先级"><a href="#选择器优先级" class="headerlink" title="选择器优先级"></a>选择器优先级</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">.p1&#123;</span><br><span class="line">    blackground-color:red;</span><br><span class="line">&#125;</span><br><span class="line">p&#123;</span><br><span class="line">    blackground-color:yellow;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">#p2&#123;</span></span><br><span class="line">    blackground-color:blue;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">&lt;p class=<span class="string">"p1"</span> id=<span class="string">"p2"</span>&gt;XXX&lt;/p&gt;</span><br></pre></td></tr></table></figure>
+
+<pre><code>优先级规则：
+    内联样式    1000
+    id选择器    100
+    类和伪类    10
+    元素选择器  1
+    通配*       0
+    继承的样式  没有优先级
+1.当选择器中包含多种选择器时，需要将多种选择器的优先级相加然后比较
+2.如果选择器优先级相同，则使用靠后的样式
+3.并集选择器优先级是单独计算的：
+    div,p,#p1,.hello{}
+4.在样式最后添加一个!important，改样式将获得最高优先级</code></pre><h2 id="文本标签"><a href="#文本标签" class="headerlink" title="文本标签"></a>文本标签</h2><pre><code>&lt;em&gt;标签表示一段内容中的着重点
+&lt;strong&gt;标签用于表示一个内容的重要性
+&lt;i&gt;斜体
+&lt;b&gt;加粗
+&lt;small&gt;小字
+&lt;cite&gt;书名号，书名，歌名，电影名等
+&lt;q&gt;短引用(行内引用)，加上引号
+&lt;blockquote&gt;长引用(块级引用)，加上引号，会独占一行
+&lt;sup&gt;设置一个上标
+&lt;sub&gt;设置一个下标
+&lt;ins&gt;表示一个插入内容，添加一个下划线
+&lt;del&gt;表示一个删除内容，添加一个删除线
+&lt;code&gt;保存文本格式
+&lt;code&gt;专门表示代码</code></pre><h2 id="列表"><a href="#列表" class="headerlink" title="列表"></a>列表</h2><pre><code>type属性可以改变列表项目符号
+列表可互相嵌套
+有序列表:&lt;ol&gt;
+无序列表:&lt;ul&gt;
+列表项:&lt;li&gt;
+注意：默认项目符号一般不使用，如需设置项目符号，可以采用为&lt;li&gt;设置背景图片的方式</code></pre><p>去掉项目符号</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">ul&#123;</span><br><span class="line">    list-style:none;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<pre><code>定义列表:&lt;dl&gt; 用来对一些词汇或内容进行定义
+            &lt;dt&gt; 被定义内容
+            &lt;dd&gt; 对定义内容的描述</code></pre><h2 id="文本格式化"><a href="#文本格式化" class="headerlink" title="文本格式化"></a>文本格式化</h2><pre><code>单位：
+    长度单位：
+        像素 px
+          em 和百分比类似，相对于当前元素的字体大小来计算的
+          lem= 1font-size</code></pre>
           
         
       
