@@ -65,7 +65,7 @@
 <meta property="og:site_name" content="莫等闲">
 <meta property="og:description" content="背景知识HTML：超文本标记语言（Hypertext Markup Language） W3C标准  “超文本”：指页面可以包含图片，链接，甚至音乐，程序等非文字元素。W3C标准：         结构 HTML         表现 CSS         行为 JavaScript（重点难点）  JavaScript：用来给HTML网页增加动态功能  HTML5是HTML规范的最新版本 一系列">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-09-07T13:34:42.055Z">
+<meta property="og:updated_time" content="2019-09-08T14:17:20.038Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="html5">
 <meta name="twitter:description" content="背景知识HTML：超文本标记语言（Hypertext Markup Language） W3C标准  “超文本”：指页面可以包含图片，链接，甚至音乐，程序等非文字元素。W3C标准：         结构 HTML         表现 CSS         行为 JavaScript（重点难点）  JavaScript：用来给HTML网页增加动态功能  HTML5是HTML规范的最新版本 一系列">
@@ -262,7 +262,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-09-07 21:34:42" itemprop="dateModified" datetime="2019-09-07T21:34:42+08:00">2019-09-07</time>
+                <time title="修改时间：2019-09-08 22:17:20" itemprop="dateModified" datetime="2019-09-08T22:17:20+08:00">2019-09-08</time>
               </span>
             
           
@@ -350,12 +350,10 @@
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;hr/&gt; 自结束符</span><br></pre></td></tr></table></figure>
 
 <h2 id="块元素和内联元素"><a href="#块元素和内联元素" class="headerlink" title="块元素和内联元素"></a>块元素和内联元素</h2><pre><code>没有任何语义
-主要用来做页面中的布局，内联元素主要用来选中文本设置样式
-&lt;a&gt;可以包含任何元素，除了自身
-&lt;p&gt;不可以包含任何元素</code></pre><p>div–块元素 会独占一整行</p>
+主要用来做页面中的布局，内联元素主要用来选中文本设置样式</code></pre><p>块元素：<br>    </p><h1><br>    <ul> <ol><br>    <p>不可以包含任何元素<br>    div–块元素 会独占一整行</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;div&gt;&lt;/div&gt;</span><br></pre></td></tr></table></figure>
 
-<p>span–内联元素（行内元素） 只占自身大小的元素</p>
+<p>内联元素：<br>    span–内联元素（行内元素） 只占自身大小的元素<br>    <a>可以包含任何元素，除了自身<br>    <b></b></a></p>
 <h2 id="乱码问题"><a href="#乱码问题" class="headerlink" title="乱码问题"></a>乱码问题</h2><pre>
 原因：解码编码所采用的规则--字符集（ASCII、ISO-8859-1、GBK、GB2312、UTF-8），不同
 解决方法：告诉浏览器网页所采用的编码字符集，meta标签用来设计网页的一些元数据，
@@ -543,7 +541,48 @@ text-decoration用来设置文本的修饰
 text-spacing 设置字符间距
 word-spacing 设置词与词间距离
 text-align 设置文本对齐格式
-text-indent 设置首行缩进</code></pre><h3 id="盒子模型（框模型）"><a href="#盒子模型（框模型）" class="headerlink" title="盒子模型（框模型）"></a>盒子模型（框模型）</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">.box&#123;</span><br><span class="line">    width:100px;//内容区大小</span><br><span class="line">    height:100px;</span><br><span class="line">    background-color:green;</span><br><span class="line">    //设置边框，缺一不可</span><br><span class="line">    border-width://若为四个值-上右下左，三个值-上 左右 下 ，两个值-上下 左右</span><br><span class="line">    border-color:</span><br><span class="line">    border-style:</span><br><span class="line"></span><br><span class="line">    border://可以同时设置四个边框的样式，宽度，颜色</span><br><span class="line">    内边距：指盒子内容区与盒子边框之间的距离</span><br><span class="line">        padding-top:</span><br><span class="line">        padding-right:</span><br><span class="line">        padding-bottom:</span><br><span class="line">        padding-left:</span><br><span class="line"></span><br><span class="line">        padding:</span><br><span class="line">    内边距会影响盒子可见框的大小，元素的背景会延伸到内边框</span><br><span class="line">    盒子大小由内容区、内边距、边框共同决定</span><br><span class="line">    盒子可见框的宽度= border-left-width + padding-left+width +padding-right + border-right-width</span><br><span class="line">    可见框的高度=border-top-width + padding-top+height + padding-bottom + border-bottom-width</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+text-indent 设置首行缩进</code></pre><h3 id="盒子模型（框模型）"><a href="#盒子模型（框模型）" class="headerlink" title="盒子模型（框模型）"></a>盒子模型（框模型）</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line">.box&#123;</span><br><span class="line">    width:100px;//内容区大小</span><br><span class="line">    height:100px;</span><br><span class="line">    background-color:green;</span><br><span class="line">    //设置边框，缺一不可</span><br><span class="line">    border-width://若为四个值-上右下左，三个值-上 左右 下 ，两个值-上下 左右</span><br><span class="line">    border-color:</span><br><span class="line">    border-style:</span><br><span class="line"></span><br><span class="line">    border://可以同时设置四个边框的样式，宽度，颜色</span><br><span class="line">    内边距：指盒子内容区与盒子边框之间的距离</span><br><span class="line">        padding-top:</span><br><span class="line">        padding-right:</span><br><span class="line">        padding-bottom:</span><br><span class="line">        padding-left:</span><br><span class="line"></span><br><span class="line">        padding:</span><br><span class="line">    内边距会影响盒子可见框的大小，元素的背景会延伸到内边框</span><br><span class="line">    盒子大小由内容区、内边距、边框共同决定</span><br><span class="line">    盒子可见框的宽度= border-left-width + padding-left+width +padding-right + border-right-width</span><br><span class="line">    可见框的高度=border-top-width + padding-top+height + padding-bottom + border-bottom-width</span><br><span class="line">    外边距：指的是当前何止与其他盒子之间的距离</span><br><span class="line">            不会影响可见框的大小，而是会影响到盒子的位置</span><br><span class="line">            四个方向的外边距：</span><br><span class="line">            margin-top:</span><br><span class="line">            margin-right:</span><br><span class="line">            margin-bottom:</span><br><span class="line">            margin-left:</span><br><span class="line">            外边距设置的是负值，则元素会反向移动</span><br><span class="line">            margin可设置为auto，，auto一般那只设置给水平方向的margin</span><br><span class="line">            设置给垂直方向，则外边距默认为0</span><br><span class="line"></span><br><span class="line">            相邻的垂直外边距会重叠，不相同取大的</span><br><span class="line">            如果父元素的垂直外边距相邻了，则子元素的外边距会设置给父元素</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="浏览器默认样式"><a href="#浏览器默认样式" class="headerlink" title="浏览器默认样式"></a>浏览器默认样式</h2><pre><code>在编写样式之前需要将浏览器中的默认样式margin和padding统统去掉</code></pre><h2 id="内联元素盒模型"><a href="#内联元素盒模型" class="headerlink" title="内联元素盒模型"></a>内联元素盒模型</h2><pre><code>内联元素：
+    不能设置宽和高
+    可以设置水平方向内边距
+    可以设置垂直方向内边距，但不影响页面布局
+    可以设置边框，但垂直边框不影响布局
+    可以设置水平方向外边距，不会重叠
+    不支持垂直外边距</code></pre><h2 id="改变元素"><a href="#改变元素" class="headerlink" title="改变元素"></a>改变元素</h2><pre><code>通过display样式可以修改元素的类型
+    可选值：
+        inline:可以将一个元素作为内联元素显示
+        block:可以建一个元素设置为块元素
+        inline-block:将一个元素转换为行内块元素
+                    一个元素既有行内元素的特点又有块元素的特点
+                    即可以设置宽高又没有独占一行
+        none:不显示元素，并且元素不会在页面继续占有位置
+visibility用来设置元素隐藏和显示的状态
+    可选值：
+        visible 默认值
+        hidden 元素会隐藏，位置依然占着</code></pre><h2 id="overflow"><a href="#overflow" class="headerlink" title="overflow"></a>overflow</h2><pre><code>子元素默认是存在于父元素的内容区中，理论上讲子元素的最大可以等于父元素内容区大小
+如果子元素大小超过了父元素的内容区，则超过的大小（溢出内容）会在父元素以为的位置显示
+父元素默认是将溢出内容在父元素外边显示
+overflow可以设置父元素如何处理溢出内容：
+    可选值：
+        visible：不对溢出内容进行处理
+        hidden：溢出内容被修将，不显示
+        scroll：是否溢出都将会为父元素添加滚动条
+        auto：会根据需要添加滚动条</code></pre><h2 id="文档流"><a href="#文档流" class="headerlink" title="文档流"></a>文档流</h2><pre><code>处在网页最底层，表示一个页面中的位置，我们所创建的元素默认都处在文档流中
+在文档流中，子元素宽度默认占父元素的全部
+元素在文档流中的特点
+    块元素：
+            1.独占一行，自上向下排列
+    内联元素
+            1.占自身大小，自左向右
+当元素的宽度或高度设置为auto时，此时指定内边距不会影响可见框的大小而是会修改宽度和高度，以适应内边距</code></pre><h2 id="浮动"><a href="#浮动" class="headerlink" title="浮动"></a>浮动</h2><pre><code>使用float使元素浮动，脱离文档流
+    可选值：
+        none 默认值，元素在文档流中排列
+        left 立即脱离文档流，向页面左侧浮动
+        right 立刻脱离文档流，向页面右侧浮动
+    1.元素浮动后会尽量向页面左上或右上浮动，直到遇到父元素的边框或其他浮动元素
+    2.浮动元素不会超过他上边的兄弟元素，最多一边齐
+    3.浮动元素不会盖住文字，文字会自动环绕在浮动元素周围</code></pre></ol></ul></h1>
     </div>
 
     
@@ -576,6 +615,10 @@ text-indent 设置首行缩进</code></pre><h3 id="盒子模型（框模型）">
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+              <a href="/2019/09/21/dataStructure/" rel="prev" title="dataStructure">
+                dataStructure <i class="fa fa-chevron-right"></i>
+              </a>
+            
           </div>
         </div>
     </footer>
@@ -627,7 +670,7 @@ text-indent 设置首行缩进</code></pre><h3 id="盒子模型（框模型）">
         
           <a href="/archives/">
         
-          <span class="site-state-item-count">8</span>
+          <span class="site-state-item-count">9</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -673,7 +716,239 @@ text-indent 设置首行缩进</code></pre><h3 id="盒子模型（框模型）">
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#背景知识"><span class="nav-number">1.</span> <span class="nav-text">背景知识</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#HTML"><span class="nav-number">1.1.</span> <span class="nav-text">HTML</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#标签"><span class="nav-number">2.</span> <span class="nav-text">标签</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#doctype"><span class="nav-number">3.</span> <span class="nav-text">doctype</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#元素"><span class="nav-number">4.</span> <span class="nav-text">元素</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#块元素和内联元素"><span class="nav-number">5.</span> <span class="nav-text">块元素和内联元素</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#乱码问题"><span class="nav-number">6.</span> <span class="nav-text">乱码问题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#实体"><span class="nav-number">7.</span> <span class="nav-text">实体</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#图片"><span class="nav-number">8.</span> <span class="nav-text">图片</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#内联框架"><span class="nav-number">9.</span> <span class="nav-text">内联框架</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#超链接"><span class="nav-number">10.</span> <span class="nav-text">超链接</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#CSS"><span class="nav-number">10.1.</span> <span class="nav-text">CSS</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#style属性"><span class="nav-number">11.</span> <span class="nav-text">style属性</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#CSS语法"><span class="nav-number">12.</span> <span class="nav-text">CSS语法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#选择器"><span class="nav-number">13.</span> <span class="nav-text">选择器</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#声明块"><span class="nav-number">14.</span> <span class="nav-text">声明块</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#元素关系"><span class="nav-number">15.</span> <span class="nav-text">元素关系</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#伪类选择器"><span class="nav-number">16.</span> <span class="nav-text">伪类选择器</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#伪元素"><span class="nav-number">17.</span> <span class="nav-text">伪元素</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#属性选择器"><span class="nav-number">18.</span> <span class="nav-text">属性选择器</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#其他子元素选择器"><span class="nav-number">19.</span> <span class="nav-text">其他子元素选择器</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#兄弟选择器"><span class="nav-number">20.</span> <span class="nav-text">兄弟选择器</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#否定伪类"><span class="nav-number">21.</span> <span class="nav-text">否定伪类</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#样式继承"><span class="nav-number">22.</span> <span class="nav-text">样式继承</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#选择器优先级"><span class="nav-number">23.</span> <span class="nav-text">选择器优先级</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#文本标签"><span class="nav-number">24.</span> <span class="nav-text">文本标签</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#列表"><span class="nav-number">25.</span> <span class="nav-text">列表</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#文本格式化"><span class="nav-number">26.</span> <span class="nav-text">文本格式化</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#文本样式"><span class="nav-number">27.</span> <span class="nav-text">文本样式</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#盒子模型（框模型）"><span class="nav-number">27.1.</span> <span class="nav-text">盒子模型（框模型）</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#背景知识"><span class="nav-number">1.</span> <span class="nav-text">背景知识</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#HTML"><span class="nav-number">1.1.</span> <span class="nav-text">HTML</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#标签"><span class="nav-number">2.</span> <span class="nav-text">标签</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#doctype"><span class="nav-number">3.</span> <span class="nav-text">doctype</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#元素"><span class="nav-number">4.</span> <span class="nav-text">元素</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#块元素和内联元素"><span class="nav-number">5.</span> <span class="nav-text">块元素和内联元素</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#null"><span class="nav-number"></span> <span class="nav-text">         不可以包含任何元素    div–块元素 会独占一整行
+1&lt;div&gt;&lt;/div&gt;
+
+内联元素：    span–内联元素（行内元素） 只占自身大小的元素    可以包含任何元素，除了自身    
+乱码问题
+原因：解码编码所采用的规则--字符集（ASCII、ISO-8859-1、GBK、GB2312、UTF-8），不同
+解决方法：告诉浏览器网页所采用的编码字符集，meta标签用来设计网页的一些元数据，
+        比如网页的字符集，关键字，简介，且是一个自结束符
+        
+
+实体特殊字符不能直接使用，需要使用一些特殊符号来表示这些特殊字符–实体（转义字符串）
+1234&gt; &amp;gt;&lt; &amp;lt;空格 &amp;nbsp;版权符号 &amp;copy;
+
+图片使用img标签来引入一个外部图片，img标签是自结束标签属性：src：设置一个外部图片路径            相对路径：指对于当前资源所在目录的位置            绝对路径：      alt：可以用来设置图片不能显示时，对图片的描述            收索引擎可以用过alt属性来标识不同的图片            如果不屑alt属性，则搜索引擎不会对img进行收录     width：改变图片的宽度，单位一般为px     height：改变图片的高度，单位一般为px图片格式：JPEG（JPG） 支持颜色多，不支持透明，图片可以压缩         GIF 支持颜色少，支支持简单的透明，支持动态图         PNG 支持颜色多，且支持复杂透明        
+1&lt;img src=&quot;1.gif&quot; alt=&quot;这是一个大松鼠&quot;/&gt;// ../返回一级目录
+
+内联框架引入一个外部的页面，使用iframe来创建一个内联框架属性：src：指向一个外部页面路径，也可使用相对路径     width:… height:…     naem:可以为框架指定一个nmae属性
+1&lt;iframe src=&quot;demo02.html&quot; name=&quot;内联框架xxx&quot;&gt;&lt;/iframe&gt;
+
+超链接使用超链接可以让我们从一个页面跳转到另一个页面属性：href：指向链接跳转目标地址（相对路径或可以写一个完整的地址）            设置为#时，超链接会跳转到当前页面顶部            mailto：邮件地址 默认打开计算机默认电子邮件客户端，并且件收件人设置mailto后的邮箱地址     id：标签的唯一标识     target：指定打开链接位置             可以设置直一个内联框架的name属性值，链接将在指定的内联框架打开             
+1&lt;a href=&quot;目标地址&quot; target=&quot;内联框架xxx&quot;&gt;超链接&lt;/a&gt;
+
+CSS层叠样式表
+注意style里面不能出现html的内容style属性内联样式 只对当前元素中的内容起作用颜色，大小
+1&lt;p style=&quot;color:red;font-size:40px;&quot;&gt;&lt;/p&gt;
+
+内部样式 将CSS样式编写到head中的style标签里12345678&lt;head&gt;    &lt;style type=&quot;text/css&quot;&gt;        a(或p或h1){            color:red;            font-size:40px;        }    &lt;/style&gt;&lt;/head&gt;
+
+外部样式 编写一个外部的CSS文件，然后通过link标签将外来CSS文件引入到当前页面中
+利用流浪器的缓存，加快用户访问的速度提高了用户体验12345678//外部CSS文件内容：xxx.cssa(或p或h1){    color:red;    font-size:40px;}&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; herf=&quot;xxx.css&quot;/&gt;
+
+CSS语法注释：
+1/*......*/
+
+选择器通过选择器可以选中页面中的指定元素，并且将申明块中的样式应用到选择器上的对应元素上元素选择器：
+    作用：选择页面中所有指定元素
+    语法：标签名{}
+id选择器：
+    作用：通过元素id属性值选中唯一的一个元素
+    语法：#id属性值{}
+class选择器：
+    作用：通过元素class属性值选中多个元素
+    语法：.class{}
+
+    注意：一个元素可以有多个class，多个值用空格隔开
+选择器分组（并集选择器）：
+    作用：可以同时选中多个选择器对应元素
+    语法：选择器1，选择器2，选择器N{}
+通配选择器：
+    作用：选中页面所有元素
+    语法：*{}
+复合选择器：
+    作用：选中同时满足多个选择器的元素
+    语法：选择器1选择器2选择器N{}
+后代选择器：
+    作用：选中指定元素的后代元素
+    语法：祖先元素 后代元素{}
+子元素选择器：
+    作用：选中指定父元素的指定字元素
+    语法：父元素&gt;子元素{}
+    
+声明块声明块紧跟在选择器后面，用一对{}括起来，声明间用;隔开,声明的样式名和样式值用:连接元素关系父元素：直接包含子元素的元素
+子元素：直接被父元素包含的元素
+祖先元素：直接或间接包含后代元素的元素
+后代元素：直接或间接被祖先元素包含的元素
+兄弟元素：拥有相同父元素的元素伪类选择器正常链接
+a:link{}
+访问过链接
+a:visited{}(只能定义字体颜色)
+鼠标滑过的链接
+a:hover{}
+正在点击的链接
+a:active{}(涉及用户隐私，visited所以只能设置字体颜色)
+获取焦点
+:focus{}(文本框获取焦点后，可以修改内容)伪元素来表示元素中一些特殊的位置为P中设置第一行设置一个背景颜色
+123p:first-line{    background-color:...;}
+
+为p中第一个字符设置特殊样式
+1234p:first-letter{    color:xx;    font-size:xx;}
+
+:before表示元素最前边
+1234p:before{;    content:&quot;xxxxxx&quot;;    color:xx;}
+
+:after表示元素最后边
+1234p:after{;    content:&quot;xxxxxx&quot;;    color:xx;}
+
+属性选择器作用：可以根据元素中属性或属性值来选取指定元素
+语法：
+    [属性名]选取含有指定属性的元素
+    [属性名=&quot;属性值&quot;]
+    [属性名^=&quot;属性值&quot;]选取含有指定属性值内容开头的元素
+    [属性名&amp;=&quot;属性值&quot;]选取含有指定属性值内容结尾的元素
+    [属性名*=&quot;属性值&quot;]选取含有指定属性值内容包含的元素123456p[title]{    xxx:xxx;}p[title=&quot;hello&quot;]{    xxx:xxx;}
+
+title属性：可以给任何标签指定，当鼠标移到元素上，元素中title属性值将会作为提示文字显示
+1&lt;p title=&quot;hello&quot;&gt;sssss&lt;/p&gt;
+
+其他子元素选择器:first-child 可以选中第一个子元素
+:last-child 可以选中最后一个子元素
+:nth-child(number) 可以选中第number个字元素
+        even表示偶数位置的子元素
+        odd表示奇数位置的子元素
+当前类型所有子元素中排列
+:first-of-type
+:last-of-type
+:nth-of-type兄弟选择器作用：选中一个元素后挨紧着的指定兄弟元素
+语法：前一个 + 后一个
+作用：选中一个元素后面所有的兄弟元素
+语法：前一个 ~ 后边所有否定伪类作用：可以从已选中的元素中剔除某些元素
+语法：:not(选择器){}样式继承子继承父或祖的样式
+但是不是所有的样式都会被继承，比如：背景相关的样式都不会被继承选择器优先级1234567891011.p1{    blackground-color:red;}p{    blackground-color:yellow;}#p2{    blackground-color:blue;}&lt;p class=&quot;p1&quot; id=&quot;p2&quot;&gt;XXX&lt;/p&gt;
+
+优先级规则：
+    内联样式    1000
+    id选择器    100
+    类和伪类    10
+    元素选择器  1
+    通配*       0
+    继承的样式  没有优先级
+1.当选择器中包含多种选择器时，需要将多种选择器的优先级相加然后比较
+2.如果选择器优先级相同，则使用靠后的样式
+3.并集选择器优先级是单独计算的：
+    div,p,#p1,.hello{}
+4.在样式最后添加一个!important，改样式将获得最高优先级文本标签&lt;em&gt;标签表示一段内容中的着重点
+&lt;strong&gt;标签用于表示一个内容的重要性
+&lt;i&gt;斜体
+&lt;b&gt;加粗
+&lt;small&gt;小字
+&lt;cite&gt;书名号，书名，歌名，电影名等
+&lt;q&gt;短引用(行内引用)，加上引号
+&lt;blockquote&gt;长引用(块级引用)，加上引号，会独占一行
+&lt;sup&gt;设置一个上标
+&lt;sub&gt;设置一个下标
+&lt;ins&gt;表示一个插入内容，添加一个下划线
+&lt;del&gt;表示一个删除内容，添加一个删除线
+&lt;code&gt;保存文本格式
+&lt;code&gt;专门表示代码列表type属性可以改变列表项目符号
+列表可互相嵌套
+有序列表:&lt;ol&gt;
+无序列表:&lt;ul&gt;
+列表项:&lt;li&gt;
+注意：默认项目符号一般不使用，如需设置项目符号，可以采用为&lt;li&gt;设置背景图片的方式去掉项目符号
+123ul{    list-style:none;}
+
+定义列表:&lt;dl&gt; 用来对一些词汇或内容进行定义
+            &lt;dt&gt; 被定义内容
+            &lt;dd&gt; 对定义内容的描述文本格式化单位：
+    长度单位：
+        像素 px
+          em 和百分比类似，相对于当前元素的字体大小来计算的
+          lem= 1font-size
+字体：
+    font-size 并不是设置字体本身大小，而是设置格的高度
+    font-family 
+    font-style 设置文字的斜体 
+    font-weight 设置文本加粗效果
+    font-variant 用来设置小型大写字母
+    分类 serif(衬线字体)
+        sans-serif(非衬线字体)
+        monospace(等宽字体)
+        cursive(草书字体)
+        fantasy(虚幻字体)
+
+    font 同时设置字体相关所有样式
+         要求文字的大小和字体必须写，而且字体必须最后一个样式，大小必须倒数第二个样式1font:small-caps bold italic 60px &quot;微软雅黑&quot;;
+
+行间距：
+    通过设置行高来间接设置行间距，行高越大行间距越大
+    使用line-height来设置行高
+    行间距 = 行高 - 字体大小
+    接受值：
+        1. 接受一个大小
+        2.指定一个百分数，则会相对与字体去计算行高
+        3.一个数值，则行高会设置字体大小相应倍数1font:small-caps bold italic 60px/60px &quot;微软雅黑&quot;;//font也可设置行高
+
+文本样式text-transform可以用来设置文本大小写
+    可选值：
+        none 默认值
+        capitalize 单词首字母大写
+        uppercase 所有单词都大写
+        lowercase 所有单词都小写 
+text-decoration用来设置文本的修饰
+    可选值：
+        none默认值
+        underline 添加下划线
+        overline 上划线
+        line-through 删除线
+去除超链接下划线，需将text-decoration值设为none
+text-spacing 设置字符间距
+word-spacing 设置词与词间距离
+text-align 设置文本对齐格式
+text-indent 设置首行缩进盒子模型（框模型）1234567891011121314151617181920212223242526272829303132333435.box{    width:100px;//内容区大小    height:100px;    background-color:green;    //设置边框，缺一不可    border-width://若为四个值-上右下左，三个值-上 左右 下 ，两个值-上下 左右    border-color:    border-style:    border://可以同时设置四个边框的样式，宽度，颜色    内边距：指盒子内容区与盒子边框之间的距离        padding-top:        padding-right:        padding-bottom:        padding-left:        padding:    内边距会影响盒子可见框的大小，元素的背景会延伸到内边框    盒子大小由内容区、内边距、边框共同决定    盒子可见框的宽度= border-left-width + padding-left+width +padding-right + border-right-width    可见框的高度=border-top-width + padding-top+height + padding-bottom + border-bottom-width    外边距：指的是当前何止与其他盒子之间的距离            不会影响可见框的大小，而是会影响到盒子的位置            四个方向的外边距：            margin-top:            margin-right:            margin-bottom:            margin-left:            外边距设置的是负值，则元素会反向移动            margin可设置为auto，，auto一般那只设置给水平方向的margin            设置给垂直方向，则外边距默认为0            相邻的垂直外边距会重叠，不相同取大的            如果父元素的垂直外边距相邻了，则子元素的外边距会设置给父元素}
+
+浏览器默认样式在编写样式之前需要将浏览器中的默认样式margin和padding统统去掉内联元素盒模型内联元素：
+    不能设置宽和高
+    可以设置水平方向内边距
+    可以设置垂直方向内边距，但不影响页面布局
+    可以设置边框，但垂直边框不影响布局
+    可以设置水平方向外边距，不会重叠
+    不支持垂直外边距改变元素通过display样式可以修改元素的类型
+    可选值：
+        inline:可以将一个元素作为内联元素显示
+        block:可以建一个元素设置为块元素
+        inline-block:将一个元素转换为行内块元素
+                    一个元素既有行内元素的特点又有块元素的特点
+                    即可以设置宽高又没有独占一行
+        none:不显示元素，并且元素不会在页面继续占有位置
+visibility用来设置元素隐藏和显示的状态
+    可选值：
+        visible 默认值
+        hidden 元素会隐藏，位置依然占着overflow子元素默认是存在于父元素的内容区中，理论上讲子元素的最大可以等于父元素内容区大小
+如果子元素大小超过了父元素的内容区，则超过的大小（溢出内容）会在父元素以为的位置显示
+父元素默认是将溢出内容在父元素外边显示
+overflow可以设置父元素如何处理溢出内容：
+    可选值：
+        visible：不对溢出内容进行处理
+        hidden：溢出内容被修将，不显示
+        scroll：是否溢出都将会为父元素添加滚动条
+        auto：会根据需要添加滚动条文档流处在网页最底层，表示一个页面中的位置，我们所创建的元素默认都处在文档流中
+在文档流中，子元素宽度默认占父元素的全部
+元素在文档流中的特点
+    块元素：
+            1.独占一行，自上向下排列
+    内联元素
+            1.占自身大小，自左向右
+当元素的宽度或高度设置为auto时，此时指定内边距不会影响可见框的大小而是会修改宽度和高度，以适应内边距浮动使用float使元素浮动，脱离文档流
+    可选值：
+        none 默认值，元素在文档流中排列
+        left 立即脱离文档流，向页面左侧浮动
+        right 立刻脱离文档流，向页面右侧浮动
+    1.元素浮动后会尽量向页面左上或右上浮动，直到遇到父元素的边框或其他浮动元素
+    2.浮动元素不会超过他上边的兄弟元素，最多一边齐
+    3.浮动元素不会盖住文字，文字会自动环绕在浮动元素周围</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#乱码问题"><span class="nav-number">1.</span> <span class="nav-text">乱码问题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#实体"><span class="nav-number">2.</span> <span class="nav-text">实体</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#图片"><span class="nav-number">3.</span> <span class="nav-text">图片</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#内联框架"><span class="nav-number">4.</span> <span class="nav-text">内联框架</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#超链接"><span class="nav-number">5.</span> <span class="nav-text">超链接</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#CSS"><span class="nav-number">5.1.</span> <span class="nav-text">CSS</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#style属性"><span class="nav-number">6.</span> <span class="nav-text">style属性</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#CSS语法"><span class="nav-number">7.</span> <span class="nav-text">CSS语法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#选择器"><span class="nav-number">8.</span> <span class="nav-text">选择器</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#声明块"><span class="nav-number">9.</span> <span class="nav-text">声明块</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#元素关系"><span class="nav-number">10.</span> <span class="nav-text">元素关系</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#伪类选择器"><span class="nav-number">11.</span> <span class="nav-text">伪类选择器</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#伪元素"><span class="nav-number">12.</span> <span class="nav-text">伪元素</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#属性选择器"><span class="nav-number">13.</span> <span class="nav-text">属性选择器</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#其他子元素选择器"><span class="nav-number">14.</span> <span class="nav-text">其他子元素选择器</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#兄弟选择器"><span class="nav-number">15.</span> <span class="nav-text">兄弟选择器</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#否定伪类"><span class="nav-number">16.</span> <span class="nav-text">否定伪类</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#样式继承"><span class="nav-number">17.</span> <span class="nav-text">样式继承</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#选择器优先级"><span class="nav-number">18.</span> <span class="nav-text">选择器优先级</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#文本标签"><span class="nav-number">19.</span> <span class="nav-text">文本标签</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#列表"><span class="nav-number">20.</span> <span class="nav-text">列表</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#文本格式化"><span class="nav-number">21.</span> <span class="nav-text">文本格式化</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#文本样式"><span class="nav-number">22.</span> <span class="nav-text">文本样式</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#盒子模型（框模型）"><span class="nav-number">22.1.</span> <span class="nav-text">盒子模型（框模型）</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#浏览器默认样式"><span class="nav-number">23.</span> <span class="nav-text">浏览器默认样式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#内联元素盒模型"><span class="nav-number">24.</span> <span class="nav-text">内联元素盒模型</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#改变元素"><span class="nav-number">25.</span> <span class="nav-text">改变元素</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#overflow"><span class="nav-number">26.</span> <span class="nav-text">overflow</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#文档流"><span class="nav-number">27.</span> <span class="nav-text">文档流</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#浮动"><span class="nav-number">28.</span> <span class="nav-text">浮动</span></a></li></ol></div>
             
 
           </div>
