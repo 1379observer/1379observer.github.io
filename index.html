@@ -245,11 +245,21 @@
                 
               
 
-              <time title="创建时间：2019-09-21 16:55:08 / 修改时间：21:55:08" itemprop="dateCreated datePublished" datetime="2019-09-21T16:55:08+08:00">2019-09-21</time>
+              <time title="创建时间：2019-09-21 16:55:08" itemprop="dateCreated datePublished" datetime="2019-09-21T16:55:08+08:00">2019-09-21</time>
             </span>
           
             
 
+            
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2019-09-25 09:24:29" itemprop="dateModified" datetime="2019-09-25T09:24:29+08:00">2019-09-25</time>
+              </span>
             
           
 
@@ -265,11 +275,8 @@
 
       
           
-            <h2 id="习题集"><a href="#习题集" class="headerlink" title="习题集"></a>习题集</h2><pre><code>1.与数据元素本身的形式、内容、相对位置、个数无关的是数据的  **逻辑结构** 。
-2.通常要求同一逻辑结构中的所有数据元素具有相同的特性，这意味着  **不仅数据元素所包含的数据项的个数要相同，而且对应数据项的类型要一致** 
-3.一些表面上很不相同的数据可以有相同的逻辑结构--数据元素是数据的基本单位，数据项是数据的最小单位，数据结构是带有结构的各数据元素的集合。
-4.算法的时间复杂度取决于 **问题的规模 待处理数据的初态**
-5.</code></pre>
+            <h2 id="习题集"><a href="#习题集" class="headerlink" title="习题集"></a>习题集</h2><p>1.与数据元素本身的形式、内容、相对位置、个数无关的是数据的  <strong>逻辑结构</strong> 。<br>2.通常要求同一逻辑结构中的所有数据元素具有相同的特性，这意味着  <strong>不仅数据元素所包含的数据项的个数要相同，而且对应数据项的类型要一致</strong><br>3.一些表面上很不相同的数据可以有相同的逻辑结构–数据元素是数据的基本单位，数据项是数据的最小单位，数据结构是带有结构的各数据元素的集合。<br>4.算法的时间复杂度取决于 <strong>问题的规模 待处理数据的初态</strong><br>5.</p>
+
           
         
       
@@ -347,7 +354,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-09-25 09:01:19" itemprop="dateModified" datetime="2019-09-25T09:01:19+08:00">2019-09-25</time>
+                <time title="修改时间：2019-09-25 09:09:03" itemprop="dateModified" datetime="2019-09-25T09:09:03+08:00">2019-09-25</time>
               </span>
             
           
@@ -427,10 +434,12 @@
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;hr/&gt; 自结束符</span><br></pre></td></tr></table></figure>
 
 <h2 id="块元素和内联元素"><a href="#块元素和内联元素" class="headerlink" title="块元素和内联元素"></a>块元素和内联元素</h2><pre><code>没有任何语义
-主要用来做页面中的布局，内联元素主要用来选中文本设置样式</code></pre><p>块元素：<br>    </p><h1><br>    <ul> <ol><br>    <p>不可以包含任何元素<br>    div–块元素 会独占一整行</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;div&gt;&lt;/div&gt;</span><br></pre></td></tr></table></figure>
+主要用来做页面中的布局，内联元素主要用来选中文本设置样式</code></pre><p>块元素：块元素 会独占一整行</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;h1&gt;</span><br><span class="line">&lt;ul&gt; &lt;ol&gt;</span><br><span class="line">&lt;p&gt;不可以包含任何元素</span><br><span class="line">&lt;div&gt;&lt;/div&gt;</span><br></pre></td></tr></table></figure>
 
-<p>内联元素：<br>    span–内联元素（行内元素） 只占自身大小的元素<br>    <a>可以包含任何元素，除了自身<br>    <b></b></a></p>
+<p>内联元素（行内元素）：只占自身大小的元素</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">span</span><br><span class="line">&lt;a&gt;可以包含任何元素，除了自身</span><br><span class="line">&lt;b&gt;</span><br></pre></td></tr></table></figure>
+
 <h2 id="乱码问题"><a href="#乱码问题" class="headerlink" title="乱码问题"></a>乱码问题</h2><pre>
 原因：解码编码所采用的规则--字符集（ASCII、ISO-8859-1、GBK、GB2312、UTF-8），不同
 解决方法：告诉浏览器网页所采用的编码字符集，meta标签用来设计网页的一些元数据，
@@ -686,7 +695,7 @@ overflow可以设置父元素如何处理溢出内容：
     该属性作用和BFC类似，所以在IE6浏览器可以通过hasLayout来解决问题
     在IE6中，为一个元素指定一个宽度，则会默认开启hasLayout
     zoom:1;
-    表示是放大的意思，后边跟着一个数值，写几就放大几倍</code></pre></ol></ul></h1>
+    表示是放大的意思，后边跟着一个数值，写几就放大几倍</code></pre>
           
         
       
